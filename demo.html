@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Expandy</title>
+		<style type="text/css">
+			* {
+				box-sizing: border-box;
+				-moz-box-sizing: border-box;
+				-webkit-box-sizing: border-box;
+			}
+		
+			body {
+				color: #fff;
+				background: #000;
+				font: 14px helvetica, arial, verdana, sans-serif;
+				position: relative;
+				margin: 50px auto;
+				width: 1000px;
+			}
+			
+			#expandy {
+				list-style: none;
+				padding: 0;
+				margin: 0;
+				position: relative;
+				overflow: hidden;
+				width: 1000px;
+				height: 350px;
+			}
+			
+			#expandy li {
+				float: left;
+				position: relative;
+				margin: 0;
+				width: 150px;
+				height: 350px;
+				overflow: hidden;
+				cursor: pointer;
+				-moz-box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.4);
+				-webkit-box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.4);
+				box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.4);
+			}
+      
+      #expandy li img {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+      
+      #expandy li .info {
+        width: 400px;
+        height: 350px;
+        padding: 20px;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+      }
+		
+			#expandy li h2 {
+				font-size: 14px;
+				margin: 0;
+        position: absolute;
+        z-index: 10;
+        top: 20px;
+        left: 20px;
+			}
+			
+			#expandy li p {
+				font-size: 14px;
+				margin: 0;
+        position: absolute;
+        z-index: 10;
+        top: 70px;
+        left: 20px;
+        width: 360px;
+			}
+      
+      #expandy li:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        width: 400px;
+        height: 350px;
+        background: #000;
+        background: rgba(0,0,0,0.8);
+        opacity: 0;
+        -moz-opacity: 0;
+        -webkit-opacity: 0;
+        transition: 0.5s all ease-in-out;
+        -moz-transition: 0.5s all ease-in-out;
+        -webkit-transition: 0.5s all ease-in-out;
+      }
+      
+      #expandy li.active:before {
+        opacity: 1;
+        -moz-opacity: 1;
+        -webkit-opacity: 1;
+      }
+			
+			#info {
+				background: #fff;
+				color: #666;
+				padding: 10px;
+				font-size: 18px;
+			}
+			
+			#info a {
+				text-decoration: none;
+				color: #c00;
+			}
+			
+			#info a:hover {
+				color: #e00;
+			}
+			
+			.cf:before, .cf:after { content: ""; display: table; }
+			.cf:after { clear: both; }
+			.cf { *zoom: 1; }
+		</style>
+	</head>
+
+	<body>
+		
+		<h1>jquery.Expandy Demo [&lt;ul&gt; style]</h1>
+		
+		<ul class="cf" id="expandy">
+			<li class="first">
+        <img src="img/hoverfly.jpg" alt="hoverfly">
+        <div class="info">
+				  <h2>Hoverfly</h2>
+				  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sit amet volutpat libero. Pellentesque mauris ipsum, imperdiet vitae vulputate sit amet, tempor quis odio. Sed luctus ultrices odio, quis pharetra turpis porta ut. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent et quam nisi, a posuere neque. Sed fermentum auctor leo sed varius. Etiam condimentum pulvinar volutpat. Morbi nunc orci, bibendum eget vestibulum at, pretium ac lacus. Vestibulum eu nulla ornare odio aliquet pharetra. Nam suscipit lobortis nibh id bibendum. Vivamus ante justo, blandit at porta eget, tincidunt eget tortor.</p>
+        </div>
+			</li>
+			<li class="second">
+        <img src="img/dragonfly.jpg" alt="dragonfly">
+        <div class="info">
+				  <h2>Dragonfly</h2>
+				  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sit amet volutpat libero. Pellentesque mauris ipsum, imperdiet vitae vulputate sit amet, tempor quis odio. Sed luctus ultrices odio, quis pharetra turpis porta ut. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent et quam nisi, a posuere neque. Sed fermentum auctor leo sed varius. Etiam condimentum pulvinar volutpat. Morbi nunc orci, bibendum eget vestibulum at, pretium ac lacus. Vestibulum eu nulla ornare odio aliquet pharetra. Nam suscipit lobortis nibh id bibendum. Vivamus ante justo, blandit at porta eget, tincidunt eget tortor.</p>
+        </div>
+			</li>
+			<li class="third">
+        <img src="img/pigeon.jpg" alt="pigeon">
+        <div class="info">
+				  <h2>Pigeon</h2>
+				  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sit amet volutpat libero. Pellentesque mauris ipsum, imperdiet vitae vulputate sit amet, tempor quis odio. Sed luctus ultrices odio, quis pharetra turpis porta ut. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent et quam nisi, a posuere neque. Sed fermentum auctor leo sed varius. Etiam condimentum pulvinar volutpat. Morbi nunc orci, bibendum eget vestibulum at, pretium ac lacus. Vestibulum eu nulla ornare odio aliquet pharetra. Nam suscipit lobortis nibh id bibendum. Vivamus ante justo, blandit at porta eget, tincidunt eget tortor.</p>
+        </div>
+			</li>
+			<li class="fourth">
+        <img src="img/twoflies.jpg" alt="two flies">
+        <div class="info">
+				  <h2>Two Flies</h2>
+				  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sit amet volutpat libero. Pellentesque mauris ipsum, imperdiet vitae vulputate sit amet, tempor quis odio. Sed luctus ultrices odio, quis pharetra turpis porta ut. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent et quam nisi, a posuere neque. Sed fermentum auctor leo sed varius. Etiam condimentum pulvinar volutpat. Morbi nunc orci, bibendum eget vestibulum at, pretium ac lacus. Vestibulum eu nulla ornare odio aliquet pharetra. Nam suscipit lobortis nibh id bibendum. Vivamus ante justo, blandit at porta eget, tincidunt eget tortor.</p>
+        </div>
+			</li>
+			<li class="fifth">
+        <img src="img/web.jpg" alt="web">
+        <div class="info">
+				  <h2>Web</h2>
+				  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sit amet volutpat libero. Pellentesque mauris ipsum, imperdiet vitae vulputate sit amet, tempor quis odio. Sed luctus ultrices odio, quis pharetra turpis porta ut. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent et quam nisi, a posuere neque. Sed fermentum auctor leo sed varius. Etiam condimentum pulvinar volutpat. Morbi nunc orci, bibendum eget vestibulum at, pretium ac lacus. Vestibulum eu nulla ornare odio aliquet pharetra. Nam suscipit lobortis nibh id bibendum. Vivamus ante justo, blandit at porta eget, tincidunt eget tortor.</p>
+        </div>
+			</li>
+		</ul>
+		
+		<p id="info">
+			For more info, visit the GitHub page at <a href="https://github.com/pdincubus/jquery.ExpandyShowcase">https://github.com/pdincubus/jquery.ExpandyShowcase</a><br>
+      Photos courtesy of <a href="http://www.flickr.com/dsnine/">David Steer</a>.
+		</p>
+			
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+		<script type="text/javascript" src="http://cachedcommons.org/cache/jquery-easing/1.3.0/javascripts/jquery-easing-min.js"></script>
+		<script type="text/javascript" src="jquery.ExpandyShowcase.js"></script>
+		<script type="text/javascript">
+			$(window).load(function() {
+				$('#expandy').expandyShowcase({
+					'animationDuration' : 250,
+					'slideEasing'		    : 'swing',
+					'compressedSize'	  : '150px',
+					'expandedSize'		  : '400px',
+					'firstOpen'			    : 0
+				});
+			});
+		</script>	
+	</body>
+</html>
