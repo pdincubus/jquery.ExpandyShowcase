@@ -4,7 +4,7 @@ Lets you turn a list (or a div with things in it) into an expandable quasi-carou
 
 ## Basic example
 
-[Visit the demo](pdincubus.github.com/jquery.ExpandyShowcase/) for a working example
+[Visit the demo](http://pdincubus.github.com/jquery.ExpandyShowcase/) for a working example
 
 ### HTML
 
